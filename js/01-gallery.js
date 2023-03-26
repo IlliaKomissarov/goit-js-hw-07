@@ -17,7 +17,6 @@ function createMarkeUp(galleryItems) {
         data-source="${original}" 
         title="" 
         alt="${description}" 
-        href="${original}"
         class="gallery__image">
       </a> 
     </div>
@@ -40,13 +39,12 @@ function onImgClick(e) {
   `);
   instance.show();
 
-  galleryImg.addEventListener("keydown", (e) => {
+  window.addEventListener("keydown", (e) => {
     if (e.keyCode === "Escape") {
       instance.close();
     }
   
   });
-  console.log(e.сode);
 }
 
 function blockStandartAction (e) {
